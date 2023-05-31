@@ -12,6 +12,13 @@ try:
 except:
     raise Exception('Create an .env file on the project root with the HOPSWORKS_API_KEY')
 
+ADLS_NAME="synapsenyctaxidlake"
+FS_NAME="nyc-taxi-data"
+try:
+    SAS_TOKEN = os.environ['SAS_TOKEN']
+except:
+    raise Exception('Create an .env file on the project root with the SAS_TOKEN')
+
 FEATURE_GROUP_NAME = 'time_series_hourly_feature_group'
 FEATURE_GROUP_VERSION = 1
 FEATURE_VIEW_NAME = 'time_series_hourly_feature_view'
